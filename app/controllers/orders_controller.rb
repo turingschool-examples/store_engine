@@ -23,14 +23,11 @@ class OrdersController < ApplicationController
 
   def new
     if current_cart.calculate_total_cost <= 50
-      flash[:error] =
-        "Sorry Partner. Your cart must contain at least $0.51 worth of goods."
-      redirect_to root_path and return
+      flash[:error] = "Sorry Partner. Your cart must contain at least $0.51 worth of goods."
+      return redirect_to root_path
     end
     @order = Order.new
     authorize! :create, Order
-
-    render :new
   end
 
   def edit
@@ -44,16 +41,18 @@ class OrdersController < ApplicationController
       redirect_to login_path and return
     end
 
-    if order = Order.create_from_cart_for_user(current_cart,
-                                          current_user,
-                                          params[:order]["stripe_card_token"])
+    if @order = Order.create_from_cart_for_user(
+      current_cart,
+      current_user,
+      params[:order]["stripe_card_token"]
+      )
 
-      UserMailer.order_confirmation(current_user, order).deliver
+      UserMailer.order_confirmation(current_user, @order).deliver
       current_cart.destroy
       session[:cart_id] = nil
       redirect_to root_path, notice: 'Thanks! Your order was submitted.'
     else
-      render action: "new"
+      render :new
     end
   end
 

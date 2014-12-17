@@ -17,9 +17,11 @@ class Order < ActiveRecord::Base
 
   def self.create_from_cart_for_user(cart, user, card)
     total_cost = cart.calculate_total_cost
-    order = Order.new( status:     "pending",
-                       user_id:    user.id,
-                       total_cost: total_cost)
+    order = Order.new(
+      status:     "pending",
+      user_id:    user.id,
+      total_cost: total_cost
+    )
     order.add_line_items(cart)
     order.save_with_payment(card)
   end
@@ -34,7 +36,6 @@ class Order < ActiveRecord::Base
   rescue Stripe::InvalidRequestError => e
     logger.error "Stripe error while creating charge: #{e.message}"
     errors.add :base, "There was a problem with your credit card."
-    false
+    self    
   end
-
 end

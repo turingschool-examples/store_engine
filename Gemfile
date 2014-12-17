@@ -34,4 +34,7 @@ group :development, :test do
   gem 'reek'
   gem 'database_cleaner'
   gem 'selenium-webdriver'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'pry'
 end

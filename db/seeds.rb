@@ -87,14 +87,14 @@ Product.create( name: "Peacoat", price: 3000,
   description: "Classy coat for the classy gent.", category_ids: ["1"], retired: true)
 
 #USERS
-User.create(full_name: "Franklin Webber", email: "demoXX+franklin@jumpstartlab.com",
-  password: "password", role: :user, display_name: nil)
-User.create(full_name: "Jeff", email: "demoXX+jeff@jumpstartlab.com",
+User.create(full_name: "Jorge Téllez", email: "jorge@turing.io",
+  password: "password", role: :user, display_name: "novohispano")
+User.create(full_name: "Jeff Casimir", email: "jeff@turing.io",
   password: "password", role: :admin, display_name: "j3")
-User.create(full_name: "Steve Klabnik", email: "demoXX+steve@jumpstartlab.com",
-  password: "password", role: :superuser, display_name: "SkrilleX")
-User.create(full_name: "Katrina Owen", email: "demoXX+katrina@jumpstartlab.com",
-  password: "password", role: :user, display_name: "Ree-na")
+User.create(full_name: "Steve Kinney", email: "steve@turing.io",
+  password: "password", role: :superuser, display_name: "apple provider")
+User.create(full_name: "Rachel Warbelow", email: "rachel@turing.io",
+  password: "password", role: :user, display_name: "mrs. warbelow")
 
 #LINE ITEMS
 ##1
