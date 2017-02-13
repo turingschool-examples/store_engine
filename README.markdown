@@ -8,7 +8,8 @@ http://tutorials.jumpstartlab.com/projects/store_engine.html
 
 ## Up and Running
 
-* You will need Ruby 2.1.5
+* Install Ruby 2.1.5 **first**
+* Then clone this repo. If you clone first then install Ruby 2.1.5 this may not work.
 * `bundle`
 * `rake db:create db:migrate db:seed`
 * `rails s`
