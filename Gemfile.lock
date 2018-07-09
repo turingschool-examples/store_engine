@@ -342,6 +342,12 @@ DEPENDENCIES
   sqlite3
   stripe
   therubyracer
-  twitter-bootstrap-rails
+  twitter-bootstrap-rails (~> 2.2.8)
   uglifier (>= 1.0.3)
   unicorn
+
+RUBY VERSION
+   ruby 2.1.5p273
+
+BUNDLED WITH
+   1.16.2
