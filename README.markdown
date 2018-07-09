@@ -17,5 +17,6 @@ A webstore that recreates the good ol' days of traveling the Oregon Trail. We se
     * `bundle install`
     * You'll probably see an error installing `libv8`
     * `gem install libv8 -v '3.16.14.11' -- --with-system-v8`
+    * `bundle install`
 * `rake db:{create,migrate,seed}`
 * `rails s`
