@@ -10,7 +10,7 @@ A webstore that recreates the good ol' days of traveling the Oregon Trail. We se
 * Install Ruby 2.1.5 **first**
 * Then clone this repo. If you clone first then install Ruby 2.1.5 this may not work. (`rbenv install 2.1.5`)
 * cd into the directory and remember to set the local version of ruby by typing in, `rbenv local 2.1.5`
-* `gem install bundle`
+* `gem install bundler`
 * `bundle`
   * If you see errors related to installing libv8:
     * `gem uninstall libv8`
