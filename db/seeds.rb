@@ -30,7 +30,7 @@ Product.create( name: "Leather Armor", price: 250,
 Product.create( name: "Ponchos", price: 25,
   description: "It gets rainy on the trail. Better bring a poncho.", category_ids: ["2"])
 Product.create( name: "Moccasins", price: 196,
-  description: "Made with real Apache tears!", category_ids: ["2"])
+  description: "Happy feet, happy trip.", category_ids: ["2"])
 Product.create( name: "Camouflage", price: 50,
   description: "Der buffalo won't be able to see yer.", category_ids: ["2"])
 
@@ -78,9 +78,9 @@ Product.create( name: "Oxen", price: 4000,
 Product.create( name: "Guide", price: 15000,
   description: "Well hey there, partner! I'm here to help.", category_ids: ["6"])
 Product.create( name: "Wagon", price: 15000,
-  description: "Made of wood, so you know it's good.", category_ids: ["6"])
+  description: "Available in pine.", category_ids: ["6"])
 Product.create( name: "Tombstone", price: 1000,
-  description: "Cause one person always gets off'd on the Oregon Trail. Always.", category_ids: ["6"])
+  description: "Free frozen pizza with every purchase.", category_ids: ["6"])
 
 #RETIRED
 Product.create( name: "Peacoat", price: 3000,
